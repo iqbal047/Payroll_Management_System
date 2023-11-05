@@ -1,0 +1,61 @@
+<div style="display: flex; justify-content: space-between;">
+    <h2>Payroll Transaction</h2>
+    <button></button>
+</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="employee">
+        <th mat-header-cell *matHeaderCellDef> Employee </th>
+        <td mat-cell *matCellDef="let element"> {{ element.employee }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="payrollPeriod">
+        <th mat-header-cell *matHeaderCellDef> Payroll Period </th>
+        <td mat-cell *matCellDef="let element"> {{ element.payrollPeriod }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="salary">
+        <th mat-header-cell *matHeaderCellDef> Salary </th>
+        <td mat-cell *matCellDef="let element"> {{ element.salary }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="hoursWorked">
+        <th mat-header-cell *matHeaderCellDef> Hours Worked </th>
+        <td mat-cell *matCellDef="let element"> {{ element.hoursWorked }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="overtimeHours">
+        <th mat-header-cell *matHeaderCellDef> Overtime Hours </th>
+        <td mat-cell *matCellDef="let element"> {{ element.overtimeHours }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="grossEarnings">
+        <th mat-header-cell *matHeaderCellDef> GrossEarnings </th>
+        <td mat-cell *matCellDef="let element"> {{ element.grossEarnings }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="deductions">
+        <th mat-header-cell *matHeaderCellDef> Deductions </th>
+        <td mat-cell *matCellDef="let element"> {{ element.deductions }} </td>
+    </ng-container> 
+
+    <ng-container matColumnDef="netPay">
+        <th mat-header-cell *matHeaderCellDef> NetPay </th>
+        <td mat-cell *matCellDef="let element"> {{ element.netPay }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let i = index;">
+            <button mat-icon-button color="warn" (click)="delete(i)">
+                <mat-icon>delete</mat-icon>
+            </button>
+            <button mat-icon-button color="primary" (click)="edit(i)">
+                <mat-icon>edit</mat-icon>
+            </button>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

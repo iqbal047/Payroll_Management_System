@@ -1,0 +1,50 @@
+<div style="display: flex; justify-content: space-between;">
+    <h2>Position List</h2>
+    <button></button>
+</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="employee">
+        <th mat-header-cell *matHeaderCellDef> Employeee </th>
+        <td mat-cell *matCellDef="let element"> {{ element.employee }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="salaryAmount">
+        <th mat-header-cell *matHeaderCellDef> Salary Amount </th>
+        <td mat-cell *matCellDef="let element"> {{ element.salaryAmount }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="payFrequency">
+        <th mat-header-cell *matHeaderCellDef> Pay Frequency </th>
+        <td mat-cell *matCellDef="let element"> {{ element.payFrequency }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="deductions">
+        <th mat-header-cell *matHeaderCellDef> Deductions </th>
+        <td mat-cell *matCellDef="let element"> {{ element.deductions }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="bonuses">
+        <th mat-header-cell *matHeaderCellDef> Bonuses </th>
+        <td mat-cell *matCellDef="let element"> {{ element.bonuses }} </td>
+    </ng-container>
+
+
+
+
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let i = index;">
+            <button mat-icon-button color="warn" (click)="delete(i)">
+                <mat-icon>delete</mat-icon>
+            </button>
+            <button mat-icon-button color="primary" (click)="edit(i)">
+                <mat-icon>edit</mat-icon>
+            </button>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+

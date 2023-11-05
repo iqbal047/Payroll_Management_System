@@ -1,0 +1,11 @@
+<form [formGroup]="roleForm" (ngSubmit)="submitForm()">
+    <mat-form-field>
+        <input matInput placeholder="Name" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Permissions" formControlName="permissions">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>

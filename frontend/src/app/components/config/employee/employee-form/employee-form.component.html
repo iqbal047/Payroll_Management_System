@@ -1,0 +1,122 @@
+<h1>Employee Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <mat-grid-list cols="1" rowHeight="16:1">
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>     
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile> 
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Date of Birth</mat-label>
+                    <input matInput [matDatepicker]="picker2" formControlName="dateOfBirth">
+                    <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+                    <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Gender</mat-label>
+                    <input matInput formControlName="gender" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Address</mat-label>
+                    <input matInput formControlName="address" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Phone</mat-label>
+                    <input matInput formControlName="phone" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Employment Start Date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="employmentStartDate">
+                    <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Department</mat-label>
+                    <input matInput formControlName="department" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Position</mat-label>
+                    <input matInput formControlName="position" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Employment Status</mat-label>
+                    <input matInput formControlName="employmentStatus" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Bank Account Details</mat-label>
+                    <input matInput formControlName="bankAccountDetails" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        
+    </mat-grid-list>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>

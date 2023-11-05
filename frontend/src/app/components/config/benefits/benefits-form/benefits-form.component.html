@@ -1,0 +1,44 @@
+<h1>Benefits Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <mat-grid-list cols="1" rowHeight="16:1">
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Employee</mat-label>
+                    <input matInput formControlName="employee" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>     
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Benefit Type</mat-label>
+                    <input matInput formControlName="benefitType" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile> 
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Benefit Cost</mat-label>
+                    <input matInput formControlName="benefitCost" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Benefit Enrollment Date</mat-label>
+                    <input matInput formControlName="benefitEnrollmentDate" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile> 
+
+    </mat-grid-list>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>

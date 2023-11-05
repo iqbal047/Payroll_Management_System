@@ -1,0 +1,58 @@
+<h1>Payment History Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <mat-grid-list cols="1" rowHeight="16:1">
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Employee</mat-label>
+                    <input matInput formControlName="employee" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>      
+        
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Payment Date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="paymentDate">
+                    <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile> 
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Payment Amount</mat-label>
+                    <input matInput formControlName="paymentAmount" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>   
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Payment Method</mat-label>
+                    <input matInput formControlName="paymentMethod" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>   
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Payment Status</mat-label>
+                    <input matInput formControlName="paymentStatus" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>     
+
+
+
+    </mat-grid-list>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
