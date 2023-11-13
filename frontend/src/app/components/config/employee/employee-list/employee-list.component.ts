@@ -13,7 +13,7 @@ import { CrudService } from 'src/app/services/crud.service';
 export class EmployeeListComponent {
 
   
-  displayedColumns: string[] = ['firstName', 'lastName', 'dateOfBirth', 'gender', 'address','phone',
+  displayedColumns: string[] = ['firstName', 'lastName', 'gender', 'address','phone',
   'email','employmentStartDate','department','position','employmentStatus','bankAccountDetails','actions' ];
   dataSource: Employee[] = [];
 

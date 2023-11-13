@@ -1,4 +1,106 @@
-<h1>Employee Form</h1>
+
+<div class="container">
+    <h1>Employee Form</h1>
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" formControlName="firstName">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" formControlName="lastName">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- <div class="col-md-6">
+                <div class="form-group">
+                    <label for="dateOfBirth">Date of Birth</label>
+                    <input type="text" class="form-control" id="dateOfBirth" formControlName="dateOfBirth"> -->
+                    <!-- Bootstrap datepicker component can be used here -->
+                <!-- </div> -->
+            <!-- </div> -->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <input type="text" class="form-control" id="gender" formControlName="gender">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" formControlName="address">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" class="form-control" id="phone" formControlName="phone">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" formControlName="email">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="employmentStartDate">Employment Start Date</label>
+                    <input type="text" class="form-control" id="employmentStartDate" formControlName="employmentStartDate">
+                    <!-- Bootstrap datepicker component can be used here -->
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <input type="text" class="form-control" id="department" formControlName="department">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="position">Position</label>
+                    <input type="text" class="form-control" id="position" formControlName="position">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="employmentStatus">Employment Status</label>
+                    <input type="text" class="form-control" id="employmentStatus" formControlName="employmentStatus">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="bankAccountDetails">Bank Account Details</label>
+                    <input type="text" class="form-control" id="bankAccountDetails" formControlName="bankAccountDetails">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+<!-- <h1>Employee Form</h1>
 <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
     <mat-grid-list cols="1" rowHeight="16:1">
 
@@ -25,7 +127,6 @@
                 <mat-form-field>
                     <mat-label>Date of Birth</mat-label>
                     <input matInput [matDatepicker]="picker2" formControlName="dateOfBirth">
-                    <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
                     <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
                     <mat-datepicker #picker2></mat-datepicker>
                 </mat-form-field>
@@ -73,7 +174,6 @@
                 <mat-form-field>
                     <mat-label>Employment Start Date</mat-label>
                     <input matInput [matDatepicker]="picker" formControlName="employmentStartDate">
-                    <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
                     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
@@ -116,7 +216,12 @@
             </div>
         </mat-grid-tile>
         
+        
+
     </mat-grid-list>
 
     <button mat-raised-button color="primary" type="submit">Submit</button>
-</form>
+</form> -->
+
+
+  <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->

@@ -16,7 +16,9 @@ export class DepartmentFormComponent {
   formGroup!: FormGroup;
   controls: any = {
     "departmentName": new FormControl('', []),
-    "departmentHead": new FormControl('', []),
+    // "departmentHead": new FormControl('', []),
+    "description": new FormControl('', []),
+    "location": new FormControl('', []),
 
   };
   submitted = false;

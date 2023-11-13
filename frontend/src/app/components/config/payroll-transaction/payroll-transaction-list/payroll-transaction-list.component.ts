@@ -12,8 +12,9 @@ import { CrudService } from 'src/app/services/crud.service';
 export class PayrollTransactionListComponent {
 
 
-  displayedColumns: string[] = ['employee', 'payrollPeriod', 'salary','hoursWorked',
+  displayedColumns: string[] = [ 'payrollPeriod', 'hoursWorked',
   'overtimeHours','grossEarnings','deductions','netPay', 'actions'];
+  // 'employee','salary',
   dataSource: PayrollTransaction[] = [];
 
   constructor(private service: CrudService, private router: Router) { }

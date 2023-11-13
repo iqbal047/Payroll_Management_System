@@ -11,7 +11,7 @@ import { populateFormControl } from 'src/app/utils/object.util';
   templateUrl: './tax-with-holding-form.component.html',
   styleUrls: ['./tax-with-holding-form.component.scss']     
 })
-export class TaxWithHoldingFormComponent {
+export class TaxWithholdingFormComponent {
 
   formGroup!: FormGroup;
   controls: any = {

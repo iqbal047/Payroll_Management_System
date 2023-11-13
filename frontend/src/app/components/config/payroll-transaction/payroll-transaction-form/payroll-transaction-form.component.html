@@ -1,4 +1,85 @@
-<h1>Payroll Transaction Form</h1>
+<div class="container">
+    <h1>Payroll Transaction Form</h1>
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+
+        <!-- <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="employee">Employee</label>
+                    <input type="text" class="form-control" id="employee" formControlName="employee">
+                </div>
+            </div>
+        </div> -->
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="payrollPeriod">Payroll Period</label>
+                    <input type="text" class="form-control" id="payrollPeriod" formControlName="payrollPeriod">
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="salary">Salary</label>
+                    <input type="text" class="form-control" id="salary" formControlName="salary">
+                </div>
+            </div>
+        </div> -->
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="hoursWorked">Hours Worked</label>
+                    <input type="text" class="form-control" id="hoursWorked" formControlName="hoursWorked">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="overtimeHours">Overtime Hours</label>
+                    <input type="text" class="form-control" id="overtimeHours" formControlName="overtimeHours">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="grossEarnings">Gross Earnings</label>
+                    <input type="text" class="form-control" id="grossEarnings" formControlName="grossEarnings">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="deductions">Deductions</label>
+                    <input type="text" class="form-control" id="deductions" formControlName="deductions">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="netPay">NetPay</label>
+                    <input type="text" class="form-control" id="netPay" formControlName="netPay">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+<!-- <h1>Payroll Transaction Form</h1>
 <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
     <mat-grid-list cols="1" rowHeight="16:1">
 
@@ -79,4 +160,4 @@
     </mat-grid-list>
 
     <button mat-raised-button color="primary" type="submit">Submit</button>
-</form>
+</form> -->

@@ -16,8 +16,8 @@ export class PaymentHistoryFormComponent {
 
   formGroup!: FormGroup;
   controls: any = {
-    "employee": new FormControl('', []),
-    "paymentDate": new FormControl('', []),
+    // "employee": new FormControl('', []),
+    // "paymentDate": new FormControl('', []),
     "paymentAmount": new FormControl('', []),
     "paymentMethod": new FormControl('', []),
     "paymentStatus": new FormControl('', [])

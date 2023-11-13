@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.prologic-creations.traders-solution' is invalid and this project uses 'com.prologiccreations.payrollapplication' instead.
+* The original package name 'com.prologic-creations.traders-solution' is invalid and this project uses 'com.prologiccreations.traderssolution' instead.
 
 # Getting Started
 

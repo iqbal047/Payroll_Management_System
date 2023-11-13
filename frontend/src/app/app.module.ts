@@ -55,8 +55,8 @@ import { PositionFormComponent } from './components/config/position/position-for
 import { PositionListComponent } from './components/config/position/position-list/position-list.component';
 import { SalaryFormComponent } from './components/config/salary/salary-form/salary-form.component';
 import { SalaryListComponent } from './components/config/salary/salary-list/salary-list.component';
-import { TaxWithHoldingFormComponent } from './components/config/tax-with-holding/tax-with-holding-form/tax-with-holding-form.component';
-import { TaxWithHoldingListComponent } from './components/config/tax-with-holding/tax-with-holding-list/tax-with-holding-list.component';
+import { TaxWithholdingFormComponent } from './components/config/tax-with-holding/tax-with-holding-form/tax-with-holding-form.component';
+import { TaxWithholdingListComponent } from './components/config/tax-with-holding/tax-with-holding-list/tax-with-holding-list.component';
 import { TimeOffFormComponent } from './components/config/time-off/time-off-form/time-off-form.component';
 import { TimeOffListComponent } from './components/config/time-off/time-off-list/time-off-list.component';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -64,6 +64,17 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { MatGridListModule } from '@angular/material/grid-list';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { AttendanceFormComponent } from './components/config/attendance/attendance-form/attendance-form.component';
+import { AttendanceListComponent } from './components/config/attendance/attendance-list/attendance-list.component';
+import { LeaveFormComponent } from './components/config/leave/leave-form/leave-form.component';
+import { LeaveListComponent } from './components/config/leave/leave-list/leave-list.component';
+import { DashboardComponent } from './components/layout/dashboard/dashboard.component';
+
+import { MatSidenavModule } from '@angular/material/sidenav';  
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 
 
@@ -72,18 +83,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     AppComponent,
     RoleFormComponent,
     RoleListComponent,    
-    // CustomerFormComponent,
-    // CustomerListComponent,
     EmployeeFormComponent,
     EmployeeListComponent,
-    // ProductFormComponent,
-    // ProductListComponent,
-    // SettingFormComponent,
-    // SettingListComponent,
-    // SupplierFormComponent,
-    // SupplierListComponent,
-    // TeamFormComponent,
-    // TeamListComponent,
     AttachmentFormComponent,
     AttachmentListComponent,
     AuditTrailFormComponent,
@@ -114,10 +115,16 @@ import { MatGridListModule } from '@angular/material/grid-list';
     PositionListComponent,
     SalaryFormComponent,
     SalaryListComponent,
-    TaxWithHoldingFormComponent,
-    TaxWithHoldingListComponent,
+    TaxWithholdingFormComponent,
+    TaxWithholdingListComponent,
     TimeOffFormComponent,
     TimeOffListComponent,
+    AttendanceFormComponent,
+    AttendanceListComponent,
+    LeaveFormComponent,
+    LeaveListComponent,
+    DashboardComponent,
+ 
 
   ],
   imports: [
@@ -137,6 +144,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatNativeDateModule,
     MatGridListModule,
     MatSnackBarModule,
+    NgbModule,
+
+
+    MatSidenavModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

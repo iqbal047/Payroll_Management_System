@@ -17,9 +17,9 @@ export class PayrollTransactionFormComponent {
  
   formGroup!: FormGroup;
   controls: any = {
-    "employee": new FormControl('', []),
+    // "employee": new FormControl('', []),
     "payrollPeriod": new FormControl('', []),
-    "salary": new FormControl('', []),
+    // "salary": new FormControl('', []),
     "hoursWorked": new FormControl('', []),
     "overtimeHours": new FormControl('', []),
     "grossEarnings": new FormControl('', []),

@@ -12,7 +12,8 @@ import { CrudService } from 'src/app/services/crud.service';
 export class DepartmentListComponent {
 
 
-  displayedColumns: string[] = ['departmentName', 'departmentHead','actions'];
+  displayedColumns: string[] = ['departmentName','description','location', 'actions'];
+  // 'departmentHead',
   dataSource: Department[] = [];
 
   constructor(private service: CrudService, private router: Router) { }

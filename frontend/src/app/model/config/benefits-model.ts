@@ -5,6 +5,6 @@ export interface Benefits extends AuditAbleModel {
     employee?:Employee;
     benefitType?:string;
     benefitCost?:Number;
-    benefitEnrollmentDate?:Date;
+    // benefitEnrollmentDate?:Date;
 
 }

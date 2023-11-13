@@ -12,7 +12,8 @@ import { CrudService } from 'src/app/services/crud.service';
 export class PaymentHistoryListComponent {
 
 
-  displayedColumns: string[] = ['employee', 'paymentDate', 'paymentAmount', 'paymentMethod','paymentStatus','actions'];
+  displayedColumns: string[] = [  'paymentAmount', 'paymentMethod','paymentStatus','actions'];
+  // 'employee','paymentDate',
   dataSource: PaymentHistory[] = [];
 
   constructor(private service: CrudService, private router: Router) { }

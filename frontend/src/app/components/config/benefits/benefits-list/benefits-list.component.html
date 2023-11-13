@@ -1,13 +1,17 @@
+
+
+
+
 <div style="display: flex; justify-content: space-between;">
     <h2>Benefits List</h2>
     <button></button>
 </div>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <ng-container matColumnDef="employee">
+    <!-- <ng-container matColumnDef="employee">
         <th mat-header-cell *matHeaderCellDef> Employee </th>
         <td mat-cell *matCellDef="let element"> {{ element.employee }} </td>
-    </ng-container>
+    </ng-container> -->
 
     <ng-container matColumnDef="benefitType">
         <th mat-header-cell *matHeaderCellDef> Benefit Type </th>
@@ -19,10 +23,10 @@
         <td mat-cell *matCellDef="let element"> {{ element.benefitCost }} </td>
     </ng-container>
 
-    <ng-container matColumnDef="benefitEnrollmentDate">
+    <!-- <ng-container matColumnDef="benefitEnrollmentDate">
         <th mat-header-cell *matHeaderCellDef> Benefit Enrollment Date </th>
         <td mat-cell *matCellDef="let element"> {{ element.benefitEnrollmentDate }} </td>
-    </ng-container>
+    </ng-container> -->
 
 
 

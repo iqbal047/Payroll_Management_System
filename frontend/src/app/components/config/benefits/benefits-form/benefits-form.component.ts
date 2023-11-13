@@ -15,10 +15,10 @@ export class BenefitsFormComponent {
 
   formGroup!: FormGroup;
   controls: any = {
-    "employee": new FormControl('', []),
+    // "employee": new FormControl('', []),
     "benefitType": new FormControl('', []),
     "benefitCost": new FormControl('', []),
-    "benefitEnrollmentDate": new FormControl('', [])
+    // "benefitEnrollmentDate": new FormControl('', [])
   };
   submitted = false;
   endPoint = "benefits";

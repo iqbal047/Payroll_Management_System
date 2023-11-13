@@ -11,7 +11,8 @@ import { CrudService } from 'src/app/services/crud.service';
 })
 export class SalaryListComponent {
 
-  displayedColumns: string[] = ['employee','salaryAmount','payFrequency', 'deductions','bonuses', 'actions'];
+  displayedColumns: string[] = ['salaryAmount','payFrequency', 'deductions','bonuses', 'actions'];
+  // 'employee',
   dataSource: Position[] = [];
 
   constructor(private service: CrudService, private router: Router) { }

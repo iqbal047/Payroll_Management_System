@@ -2,10 +2,10 @@ import { AuditAbleModel } from "../super-model/audit-able-model";
 import { Employee } from "./employee-model";
 
 export interface TimeOff extends AuditAbleModel {
-    employee?:Employee;
+    // employee?:Employee;
     timeOffType?:string;
-    startDate?:Date;
-    endDate?:Date;
+    // startDate?:Date;
+    // endDate?:Date;
     approvalStatus?:string;
 
 }

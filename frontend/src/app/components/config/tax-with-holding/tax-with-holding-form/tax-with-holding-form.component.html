@@ -1,4 +1,51 @@
-<h1>TaxWithholding Form</h1>
+
+<div class="container">
+    <h1>Tax Withholding Form</h1>
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="employee">Employee</label>
+                    <input type="text" class="form-control" id="employee" formControlName="employee">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="taxType">Tax Type</label>
+                    <input type="text" class="form-control" id="taxType" formControlName="taxType">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="taxAmount">Tax Amount</label>
+                    <input type="text" class="form-control" id="taxAmount" formControlName="taxAmount">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+<!-- <h1>TaxWithholding Form</h1>
 <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
     <mat-grid-list cols="1" rowHeight="16:1">
 
@@ -32,6 +79,6 @@
     </mat-grid-list>
 
     <button mat-raised-button color="primary" type="submit">Submit</button>
-</form>
+</form> -->
 
 

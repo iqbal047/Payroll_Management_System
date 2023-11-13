@@ -11,7 +11,8 @@ import { CrudService } from 'src/app/services/crud.service';
 })
 export class BenefitsListComponent {
 
-  displayedColumns: string[] = ['employee', 'benefitType', 'benefitCost', 'benefitEnrollmentDate','actions'];
+  displayedColumns: string[] = [ 'benefitType', 'benefitCost','actions'];
+  // 'employee',  'benefitEnrollmentDate',
   dataSource: Benefits[] = [];
 
   constructor(private service: CrudService, private router: Router) { }

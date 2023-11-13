@@ -1,4 +1,60 @@
-<h1>Position Form</h1>
+<div class="container">
+    <h1>Salary Form</h1>
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+
+        <!-- <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="employee">Employee</label>
+                    <input type="text" class="form-control" id="employee" formControlName="employee">
+                </div>
+            </div>
+        </div> -->
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="salaryAmount">Salary Amount</label>
+                    <input type="text" class="form-control" id="salaryAmount" formControlName="salaryAmount">
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="payFrequency">Pay Frequency</label>
+                    <input type="text" class="form-control" id="payFrequency" formControlName="payFrequency">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="deductions">Deductions</label>
+                    <input type="text" class="form-control" id="deductions" formControlName="deductions">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="bonuses">Bonuses</label>
+                    <input type="text" class="form-control" id="bonuses" formControlName="bonuses">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+<!-- <h1>Position Form</h1>
 <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
     <mat-grid-list cols="1" rowHeight="16:1">
 
@@ -50,5 +106,5 @@
     </mat-grid-list>
 
     <button mat-raised-button color="primary" type="submit">Submit</button>
-</form>
+</form> -->
 

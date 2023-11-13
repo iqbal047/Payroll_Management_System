@@ -9,7 +9,7 @@ import { CrudService } from 'src/app/services/crud.service';
   templateUrl: './tax-with-holding-list.component.html',
   styleUrls: ['./tax-with-holding-list.component.scss']
 })
-export class TaxWithHoldingListComponent {
+export class TaxWithholdingListComponent {
 
   displayedColumns: string[] = ['employee','taxType','taxAmount', 'actions'];
   dataSource: TaxWithholding[] = [];

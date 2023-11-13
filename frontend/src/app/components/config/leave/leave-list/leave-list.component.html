@@ -1,0 +1,60 @@
+
+
+<div style="display: flex; justify-content: space-between;">
+    <h2>Leave List</h2>
+    <button></button>
+</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- <ng-container matColumnDef="employee">
+        <th mat-header-cell *matHeaderCellDef> Employee </th>
+        <td mat-cell *matCellDef="let element"> {{ element.employee }} </td>
+    </ng-container> -->
+
+    <!-- <ng-container matColumnDef="startDate">
+        <th mat-header-cell *matHeaderCellDef> startDate </th>
+        <td mat-cell *matCellDef="let element"> {{ element.startDate }} </td>
+    </ng-container> -->
+
+    <!-- <ng-container matColumnDef="endDate">
+        <th mat-header-cell *matHeaderCellDef> endDate </th>
+        <td mat-cell *matCellDef="let element"> {{ element.endDate }} </td>
+    </ng-container> -->
+
+    <ng-container matColumnDef="approved">
+        <th mat-header-cell *matHeaderCellDef> approved </th>
+        <td mat-cell *matCellDef="let element"> {{ element.approved }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="leaveType">
+        <th mat-header-cell *matHeaderCellDef> Leave Type </th>
+        <td mat-cell *matCellDef="let element"> {{ element.leaveType }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="reason">
+        <th mat-header-cell *matHeaderCellDef> Reason </th>
+        <td mat-cell *matCellDef="let element"> {{ element.reason }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="halfDay">
+        <th mat-header-cell *matHeaderCellDef> Half Day </th>
+        <td mat-cell *matCellDef="let element"> {{ element.halfDay }} </td>
+    </ng-container>
+
+
+
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let i = index;">
+            <button mat-icon-button color="warn" (click)="delete(i)">
+                <mat-icon>delete</mat-icon>
+            </button>
+            <button mat-icon-button color="primary" (click)="edit(i)">
+                <mat-icon>edit</mat-icon>
+            </button>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

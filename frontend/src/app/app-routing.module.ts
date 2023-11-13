@@ -16,32 +16,48 @@ import { PositionFormComponent } from './components/config/position/position-for
 import { PositionListComponent } from './components/config/position/position-list/position-list.component';
 import { SalaryFormComponent } from './components/config/salary/salary-form/salary-form.component';
 import { SalaryListComponent } from './components/config/salary/salary-list/salary-list.component';
-import { TaxWithHoldingFormComponent } from './components/config/tax-with-holding/tax-with-holding-form/tax-with-holding-form.component';
-import { TaxWithHoldingListComponent } from './components/config/tax-with-holding/tax-with-holding-list/tax-with-holding-list.component';
+import { TaxWithholdingFormComponent } from './components/config/tax-with-holding/tax-with-holding-form/tax-with-holding-form.component';
+import { TaxWithholdingListComponent } from './components/config/tax-with-holding/tax-with-holding-list/tax-with-holding-list.component';
 import { TimeOffFormComponent } from './components/config/time-off/time-off-form/time-off-form.component';
 import { TimeOffListComponent } from './components/config/time-off/time-off-list/time-off-list.component';
+import { AttendanceFormComponent } from './components/config/attendance/attendance-form/attendance-form.component';
+import { AttendanceListComponent } from './components/config/attendance/attendance-list/attendance-list.component';
+import { LeaveFormComponent } from './components/config/leave/leave-form/leave-form.component';
+import { LeaveListComponent } from './components/config/leave/leave-list/leave-list.component';
+import { DashboardComponent } from './components/layout/dashboard/dashboard.component';
 
 const routes: Routes = [
-  // {path: '', component: RoleFormComponent},
-  // {path: 'list', component: RoleListComponent},
-  {path: 'employee-form', component: EmployeeFormComponent},
-  {path: 'employee-list', component: EmployeeListComponent},
-  {path: 'benefits-form', component: BenefitsFormComponent},
-  {path: 'benefits-list', component: BenefitsListComponent},
-  {path: 'department-form', component: DepartmentFormComponent},
-  {path: 'department-list', component: DepartmentListComponent},
-  {path: 'payment-history-form', component: PaymentHistoryFormComponent},
-  {path: 'payment-history-list', component: PaymentHistoryListComponent},
-  {path: 'payroll-transaction-form', component: PayrollTransactionFormComponent},
-  {path: 'payroll-transaction-list', component: PayrollTransactionListComponent},
-  {path: 'position-form', component: PositionFormComponent},
-  {path: 'position-list', component: PositionListComponent},
-  {path: 'salary-form', component: SalaryFormComponent},
-  {path: 'salary-list', component: SalaryListComponent},
-  {path: 'tax-with-holding-form', component: TaxWithHoldingFormComponent},
-  {path: 'tax-with-holding-list', component: TaxWithHoldingListComponent},
-  {path: 'time-off-form', component: TimeOffFormComponent},
-  {path: 'time-off-list', component: TimeOffListComponent}
+  {
+    path: '', component: DashboardComponent,
+  children: [
+    // {path: '', component: RoleFormComponent},
+    // {path: 'list', component: RoleListComponent},
+    {path: 'attendance-form', component: AttendanceFormComponent},
+    {path: 'attendance-list', component: AttendanceListComponent},
+    {path: 'employee-form', component: EmployeeFormComponent},
+    {path: 'employee-list', component: EmployeeListComponent},
+    {path: 'benefits-form', component: BenefitsFormComponent},
+    {path: 'benefits-list', component: BenefitsListComponent},
+    {path: 'department-form', component: DepartmentFormComponent},
+    {path: 'department-list', component: DepartmentListComponent},
+    {path: 'payment-history-form', component: PaymentHistoryFormComponent},
+    {path: 'payment-history-list', component: PaymentHistoryListComponent},
+    {path: 'payroll-transaction-form', component: PayrollTransactionFormComponent},
+    {path: 'payroll-transaction-list', component: PayrollTransactionListComponent},
+    {path: 'position-form', component: PositionFormComponent},
+    {path: 'position-list', component: PositionListComponent},
+    {path: 'salary-form', component: SalaryFormComponent},
+    {path: 'salary-list', component: SalaryListComponent},
+    {path: 'tax-with-holding-form', component: TaxWithholdingFormComponent},
+    {path: 'tax-with-holding-list', component: TaxWithholdingListComponent},
+    {path: 'time-off-form', component: TimeOffFormComponent},
+    {path: 'time-off-list', component: TimeOffListComponent},
+    {path: 'leave-form', component: LeaveFormComponent},
+    {path: 'leave-list', component: LeaveListComponent}
+  ]
+}
+
+  // {path: 'dashboard-list', component: LeaveListComponent}
 ];
 
 @NgModule({
