@@ -1,0 +1,64 @@
+
+<div style="display: flex; justify-content: space-between;">
+    <h2>Attendance List</h2>
+    <button></button>
+</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- <ng-container matColumnDef="logDate">
+        <th mat-header-cell *matHeaderCellDef> logDate </th>
+        <td mat-cell *matCellDef="let element"> {{ element.logDate }} </td>
+    </ng-container> -->
+
+    <ng-container matColumnDef="isPresent">
+        <th mat-header-cell *matHeaderCellDef> isPresent </th>
+        <td mat-cell *matCellDef="let element"> {{ element.isPresent }} </td>
+    </ng-container>
+
+    <!-- <ng-container matColumnDef="PresentDays">
+        <th mat-header-cell *matHeaderCellDef> PresentDays </th>
+        <td mat-cell *matCellDef="let element"> {{ element.PresentDays }} </td>
+    </ng-container> -->
+
+
+    <ng-container matColumnDef="remarks">
+        <th mat-header-cell *matHeaderCellDef> Remarks </th>
+        <td mat-cell *matCellDef="let element"> {{ element.remarks }} </td>
+    </ng-container>
+
+        <ng-container matColumnDef="isOvertime">
+        <th mat-header-cell *matHeaderCellDef> isOvertime </th>
+        <td mat-cell *matCellDef="let element"> {{ element.isOvertime }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="hoursWorked">
+        <th mat-header-cell *matHeaderCellDef> Hours Worked </th>
+        <td mat-cell *matCellDef="let element"> {{ element.hoursWorked }} </td>
+    </ng-container>
+
+    
+    <!-- <ng-container matColumnDef="OvertimeHour">
+        <th mat-header-cell *matHeaderCellDef> OvertimeHour </th>
+        <td mat-cell *matCellDef="let element"> {{ element.OvertimeHour }} </td>
+    </ng-container> -->
+
+    <ng-container matColumnDef="location">
+        <th mat-header-cell *matHeaderCellDef> location </th>
+        <td mat-cell *matCellDef="let element"> {{ element.location }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let i = index;">
+            <button mat-icon-button color="warn" (click)="delete(i)">
+                <mat-icon>delete</mat-icon>
+            </button>
+            <button mat-icon-button color="primary" (click)="edit(i)">
+                <mat-icon>edit</mat-icon>
+            </button>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

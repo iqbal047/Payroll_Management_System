@@ -1,0 +1,191 @@
+
+Header 
+.header-content-spacer {
+  flex: 1 1 auto;
+}
+
+// Sidenav
+.sidenav-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.profile-content {
+  position: sticky;
+  top:0;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 16px;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  height: var(--mat-toolbar-standard-height);
+  background: var(--mat-toolbar-container-background-color);
+  color: var(--mat-toolbar-container-text-color);
+}
+
+.menu-container {
+  min-width: 15rem;
+}
+
+.menu-item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--mat-toolbar-container-background-color);
+  transition: background-color 0.3s;
+}
+
+// .menu-item:last-child {
+//   border-bottom: none;
+// }
+
+// .menu-title:hover {
+//   background-color: #ebebeb;
+// }
+
+// .submenu {
+//   display: none;
+//   cursor: pointer;
+// }
+
+
+// .menu-item:hover .submenu {
+//   display: block;
+// }
+
+
+// .submenu-item {
+//   padding: 5px 0;
+//   margin-left: 10px;
+// }
+
+// .submenu-item:hover {
+//   background-color: #cccccc;
+// }
+
+// .menu-item .submenu-item {
+//   font-size: 12px;
+//   font-weight: 300;
+//   color: var(--mat-toolbar-container-text-color);
+// }
+
+// my code
+
+// .submenu {
+//   display: none;
+//   cursor: pointer;
+// }
+// .menu-item:hover .submenu {
+//   display: block;
+// }
+
+
+
+
+
+
+
+
+
+//end code
+
+// Body
+.page-body {
+  position: absolute;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;  
+}
+
+
+// new style
+$sidenav-width: 15rem;
+$submenu-width: 20%; // Adjust this as needed
+$min-submenu-item-width: 15rem; // Minimum width for submenu items
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: $sidenav-width;
+  position: fixed;
+  z-index: 1;
+  // top: 0;
+  left: 0;
+  background-color: #111;
+  padding-top: 20px;
+}
+
+.menu-item {
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+
+  &:hover {
+    background-color: #333;
+  }
+
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: $sidenav-width;
+    background-color: #111;
+    width: max($submenu-width, $min-submenu-item-width); // Ensure a minimum width
+    margin: 0;
+    padding: 0;
+
+    .submenu-item {
+      padding: 10px;
+      cursor: pointer;
+      position: relative;
+      margin: 0;
+      min-width: $min-submenu-item-width; // Minimum width for submenu items
+
+      &:hover {
+        background-color: #555;
+      }
+
+      .subsubmenu {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%; // Adjusted left position
+        background-color: #111;
+        width: max($submenu-width, $min-submenu-item-width); // Ensure a minimum width
+        margin: 0;
+        padding: 0;
+
+        .subsubmenu-item {
+          padding: 10px;
+          cursor: pointer;
+          position: relative;
+          margin: 0;
+          min-width: $min-submenu-item-width; // Minimum width for submenu items
+
+          &:hover {
+            background-color: #777;
+          }
+        }
+      }
+
+      &:hover .subsubmenu {
+        display: block;
+      }
+    }
+  }
+
+  &:hover .submenu {
+    display: block;
+  }
+}

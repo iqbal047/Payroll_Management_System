@@ -1,0 +1,106 @@
+<div class="container">
+    <h1>Leave Form</h1>
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+        <div class="form-group">
+            <label for="approved">Approved</label>
+            <input type="text" class="form-control" id="approved" formControlName="approved">
+        </div>
+
+        <div class="form-group">
+            <label for="leaveType">Leave Type</label>
+            <input type="text" class="form-control" id="leaveType" formControlName="leaveType">
+        </div>
+
+        <div class="form-group">
+            <label for="reason">Reason</label>
+            <input type="text" class="form-control" id="reason" formControlName="reason">
+        </div>
+
+        <div class="form-group">
+            <label for="halfDay">Half Day</label>
+            <input type="text" class="form-control" id="halfDay" formControlName="halfDay">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+<!-- <h1>Leave Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <mat-grid-list cols="1" rowHeight="16:1">
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Employee</mat-label>
+                    <input matInput formControlName="employee" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile> 
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>startDate</mat-label>
+                    <input matInput formControlName="startDate" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile> 
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>endDate</mat-label>
+                    <input matInput formControlName="endDate" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>     
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Approved</mat-label>
+                    <input matInput formControlName="approved" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile> 
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Leave Type</mat-label>
+                    <input matInput formControlName="leaveType" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Reason</mat-label>
+                    <input matInput formControlName="reason" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile> 
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>HalfDay</mat-label>
+                    <input matInput formControlName="halfDay" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile> 
+
+    </mat-grid-list>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form> -->

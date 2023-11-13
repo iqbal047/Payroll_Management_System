@@ -1,0 +1,141 @@
+
+<div class="container">
+    <h1>Attendance Form</h1>
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="isPresent">Is Present</label>
+            <input type="text" class="form-control" id="isPresent" formControlName="isPresent">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="remarks">Remarks</label>
+            <input type="text" class="form-control" id="remarks" formControlName="remarks">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="isOvertime">Is Overtime</label>
+            <input type="text" class="form-control" id="isOvertime" formControlName="isOvertime">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="hoursWorked">Hours Worked</label>
+            <input type="text" class="form-control" id="hoursWorked" formControlName="hoursWorked">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" class="form-control" id="location" formControlName="location">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+
+
+
+
+
+
+
+<!-- <h1>Attendance Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <mat-grid-list cols="1" rowHeight="16:1">
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>logDate</mat-label>
+                    <input matInput formControlName="logDate" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>   
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>PresentDays</mat-label>
+                    <input matInput formControlName="PresentDays" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>    
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>isPresent</mat-label>
+                    <input matInput formControlName="isPresent" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>     
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Remarks</mat-label>
+                    <input matInput formControlName="remarks" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile> 
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>OvertimeHour</mat-label>
+                    <input matInput formControlName="OvertimeHour" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile> 
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>isOvertime</mat-label>
+                    <input matInput formControlName="isOvertime" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile> 
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Hours Worked</mat-label>
+                    <input matInput formControlName="hoursWorked" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile> 
+
+
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>location</mat-label>
+                    <input matInput formControlName="location" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+    </mat-grid-list>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form> -->
