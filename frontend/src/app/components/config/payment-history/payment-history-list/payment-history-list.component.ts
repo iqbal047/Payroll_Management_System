@@ -12,14 +12,14 @@ import { CrudService } from 'src/app/services/crud.service';
 export class PaymentHistoryListComponent {
 
 
-  displayedColumns: string[] = [  'paymentAmount', 'paymentMethod','paymentStatus','actions'];
-  // 'employee','paymentDate',
+  displayedColumns: string[] = [ 'employee', 'paymentDate', 'paymentAmount', 'paymentMethod','paymentStatus','actions'];
+  
   dataSource: PaymentHistory[] = [];
 
   constructor(private service: CrudService, private router: Router) { }
 
   ngOnInit(): void {
-    this.service.getList('paymenthistory').then((res: AppResponse) => {
+    this.service.getList('paymenthistory').subscribe((res: AppResponse) => {
       this.dataSource = res.data.content
     }
     );

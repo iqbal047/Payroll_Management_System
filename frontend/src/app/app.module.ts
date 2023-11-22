@@ -12,18 +12,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { RoleFormComponent } from './components/auth/role/role-form/role-form.component';
 import { RoleListComponent } from './components/auth/role/role-list/role-list.component';
-// import { CustomerFormComponent } from './components/config/customer/customer-form/customer-form.component';
-// import { CustomerListComponent } from './components/config/customer/customer-list/customer-list.component';
 import { EmployeeFormComponent } from './components/config/employee/employee-form/employee-form.component';
 import { EmployeeListComponent } from './components/config/employee/employee-list/employee-list.component';
-// import { ProductFormComponent } from './components/config/product/product-form/product-form.component';
-// import { ProductListComponent } from './components/config/product/product-list/product-list.component';
-// import { SettingFormComponent } from './components/config/setting/setting-form/setting-form.component';
-// import { SettingListComponent } from './components/config/setting/setting-list/setting-list.component';
-// import { SupplierFormComponent } from './components/config/supplier/supplier-form/supplier-form.component';
-// import { SupplierListComponent } from './components/config/supplier/supplier-list/supplier-list.component';
-// import { TeamFormComponent } from './components/config/team/team-form/team-form.component';
-// import { TeamListComponent } from './components/config/team/team-list/team-list.component';
 import { AttachmentFormComponent } from './components/data/attachment/attachment-form/attachment-form.component';
 import { AttachmentListComponent } from './components/data/attachment/attachment-list/attachment-list.component';
 import { AuditTrailFormComponent } from './components/data/audit-trail/audit-trail-form/audit-trail-form.component';
@@ -42,7 +32,7 @@ import { AuditAbleFormComponent } from './components/super/audit-able/audit-able
 import { AuditAbleListComponent } from './components/super/audit-able/audit-able-list/audit-able-list.component';
 import { BaseFormComponent } from './components/super/base/base-form/base-form.component';
 import { BaseListComponent } from './components/super/base/base-list/base-list.component';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { BenefitsFormComponent } from './components/config/benefits/benefits-form/benefits-form.component';
 import { BenefitsListComponent } from './components/config/benefits/benefits-list/benefits-list.component';
 import { DepartmentFormComponent } from './components/config/department/department-form/department-form.component';
@@ -62,18 +52,32 @@ import { TimeOffListComponent } from './components/config/time-off/time-off-list
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-
 import { MatGridListModule } from '@angular/material/grid-list';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { AttendanceFormComponent } from './components/config/attendance/attendance-form/attendance-form.component';
 import { AttendanceListComponent } from './components/config/attendance/attendance-list/attendance-list.component';
 import { LeaveFormComponent } from './components/config/leave/leave-form/leave-form.component';
 import { LeaveListComponent } from './components/config/leave/leave-list/leave-list.component';
 import { DashboardComponent } from './components/layout/dashboard/dashboard.component';
-
-import { MatSidenavModule } from '@angular/material/sidenav';  
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+// import { UserFormComponent } from './components/auth/role/user-form/user-form.component';
+// import { UserListComponent } from './components/auth/role/user-list/user-list.component';
+import { UserFormComponent } from './components/auth/user/user-form/user-form.component';
+import { UserListComponent } from './components/auth/user/user-list/user-list.component';
+
+import { HeaderComponent } from './components/layout/header/header.component';
+import { HomeComponent } from './components/layout/home/home.component';
+import { SidemenuComponent } from './components/layout/sidemenu/sidemenu.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import { AboutComponent } from './components/layout/about/about.component';
+import { ContactComponent } from './components/layout/contact/contact.component';
+import { LoginComponent } from './components/layout/login-page/login/login.component';
+import { DevicesComponent } from './components/layout/devices/devices.component';
+
+
 
 
 
@@ -82,7 +86,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   declarations: [
     AppComponent,
     RoleFormComponent,
-    RoleListComponent,    
+    RoleListComponent,
     EmployeeFormComponent,
     EmployeeListComponent,
     AttachmentFormComponent,
@@ -124,7 +128,18 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     LeaveFormComponent,
     LeaveListComponent,
     DashboardComponent,
- 
+    UserFormComponent,
+    UserListComponent,
+    HeaderComponent,
+    HomeComponent,
+    SidemenuComponent,
+    AboutComponent,
+    ContactComponent,
+    LoginComponent,
+    DevicesComponent,
+
+
+
 
   ],
   imports: [
@@ -140,15 +155,22 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatInputModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
-    MatDatepickerModule,  
+    MatDatepickerModule,
     MatNativeDateModule,
     MatGridListModule,
     MatSnackBarModule,
     NgbModule,
-
-
     MatSidenavModule,
     MatToolbarModule,
+    MatMenuModule,
+    MatDividerModule,
+    MatListModule
+
+
+
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

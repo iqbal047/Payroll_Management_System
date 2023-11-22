@@ -6,20 +6,20 @@
 </div>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <!-- <ng-container matColumnDef="employee">
+    <ng-container matColumnDef="employee">
         <th mat-header-cell *matHeaderCellDef> Employee </th>
-        <td mat-cell *matCellDef="let element"> {{ element.employee }} </td>
-    </ng-container> -->
+        <td mat-cell *matCellDef="let element"> {{ element.employee.firstName}} </td>
+    </ng-container>
 
-    <!-- <ng-container matColumnDef="startDate">
-        <th mat-header-cell *matHeaderCellDef> startDate </th>
+    <ng-container matColumnDef="startDate">
+        <th mat-header-cell *matHeaderCellDef> Start Date </th>
         <td mat-cell *matCellDef="let element"> {{ element.startDate }} </td>
-    </ng-container> -->
+    </ng-container>
 
-    <!-- <ng-container matColumnDef="endDate">
-        <th mat-header-cell *matHeaderCellDef> endDate </th>
+    <ng-container matColumnDef="endDate">
+        <th mat-header-cell *matHeaderCellDef> End Date </th>
         <td mat-cell *matCellDef="let element"> {{ element.endDate }} </td>
-    </ng-container> -->
+    </ng-container>
 
     <ng-container matColumnDef="approved">
         <th mat-header-cell *matHeaderCellDef> approved </th>

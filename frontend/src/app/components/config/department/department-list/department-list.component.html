@@ -7,15 +7,17 @@
 </div>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
+    <ng-container matColumnDef="departmentHead">
+        <th mat-header-cell *matHeaderCellDef> Department Head </th>
+        <td mat-cell *matCellDef="let element"> {{ element.departmentHead.firstName }} </td>
+    </ng-container>
+
     <ng-container matColumnDef="departmentName">
         <th mat-header-cell *matHeaderCellDef> Department Name </th>
         <td mat-cell *matCellDef="let element"> {{ element.departmentName }} </td>
     </ng-container>
 
-    <!-- <ng-container matColumnDef="departmentHead">
-        <th mat-header-cell *matHeaderCellDef> Department Head </th>
-        <td mat-cell *matCellDef="let element"> {{ element.departmentHead }} </td>
-    </ng-container> -->
+
 
     <ng-container matColumnDef="description">
         <th mat-header-cell *matHeaderCellDef> description </th>

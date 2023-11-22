@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { OperationStatus } from 'src/app/constants/status.enum';
-import { Benefits } from 'src/app/model/config/benefits-model';
 import { Employee } from 'src/app/model/config/employee-model';
 import { CrudService } from 'src/app/services/crud.service';
 import { NotificationUtil } from 'src/app/utils/notification.util';
@@ -20,11 +19,13 @@ export class EmployeeFormComponent {
     "lastName": new FormControl('', []),
     "dateOfBirth": new FormControl('', []),
     "gender": new FormControl('', []),
+    "nationalId": new FormControl('', []),
     "address": new FormControl('', []),
     "phone": new FormControl('', []),
     "email": new FormControl('', []),
     "employmentStartDate": new FormControl('', []),
     "department": new FormControl('', []),
+    "designation": new FormControl('', []),
     "position": new FormControl('', []),
     "employmentStatus": new FormControl('', []),
     "bankAccountDetails": new FormControl('', []),

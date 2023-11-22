@@ -1,100 +1,116 @@
-
-<div class="container">
+<div class="container mt-5">
     <h1>Employee Form</h1>
     <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+
         <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="firstName">First Name</label>
-                    <input type="text" class="form-control" id="firstName" formControlName="firstName">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" formControlName="lastName">
-                </div>
+            <div class="col-md-6 mb-3">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" formControlName="firstName" placeholder ="firstName">
             </div>
         </div>
+
         <div class="row">
-            <!-- <div class="col-md-6">
-                <div class="form-group">
-                    <label for="dateOfBirth">Date of Birth</label>
-                    <input type="text" class="form-control" id="dateOfBirth" formControlName="dateOfBirth"> -->
-                    <!-- Bootstrap datepicker component can be used here -->
-                <!-- </div> -->
-            <!-- </div> -->
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="gender">Gender</label>
-                    <input type="text" class="form-control" id="gender" formControlName="gender">
-                </div>
+            <div class="col-md-6 mb-3">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" formControlName="lastName" placeholder ="lastName">
             </div>
         </div>
+
         <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label for="address">Address</label>
-                    <input type="text" class="form-control" id="address" formControlName="address">
-                </div>
+            <div class="col-md-6 mb-3">
+                <label for="dateOfBirth">Date of Birth</label>
+                <input type="date" class="form-control" id="dateOfBirth" formControlName="dateOfBirth" placeholder="dateOfBirth">
             </div>
         </div>
+
         <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="text" class="form-control" id="phone" formControlName="phone">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="text" class="form-control" id="email" formControlName="email">
-                </div>
+            <div class="col-md-6 mb-3">
+                <label for="gender" class="form-label" >Gender</label>
+                <select class="form-select" formControlName="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="employmentStartDate">Employment Start Date</label>
-                    <input type="text" class="form-control" id="employmentStartDate" formControlName="employmentStartDate">
-                    <!-- Bootstrap datepicker component can be used here -->
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="department">Department</label>
-                    <input type="text" class="form-control" id="department" formControlName="department">
-                </div>
+            <div class="col-md-6 mb-3">
+                <label for="nationalId">National ID</label>
+                <input type="number" class="form-control" id="nationalId" formControlName="nationalId" placeholder="nationalId">
             </div>
         </div>
+
         <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="position">Position</label>
-                    <input type="text" class="form-control" id="position" formControlName="position">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="employmentStatus">Employment Status</label>
-                    <input type="text" class="form-control" id="employmentStatus" formControlName="employmentStatus">
-                </div>
+            <div class="col-md-6 mb-3">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" formControlName="address" placeholder="address">
             </div>
         </div>
+
         <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label for="bankAccountDetails">Bank Account Details</label>
-                    <input type="text" class="form-control" id="bankAccountDetails" formControlName="bankAccountDetails">
-                </div>
+            <div class="col-md-6 mb-3">
+                <label for="phone">Phone</label>
+                <input type="number" class="form-control" id="phone" formControlName="phone" placeholder="phone number">
             </div>
         </div>
+
         <div class="row">
-            <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="col-md-6 mb-3">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" formControlName="email" placeholder="email">
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="employmentStartDate">Employment Start Date</label>
+                <input type="date" class="form-control" id="employmentStartDate" formControlName="employmentStartDate" placeholder="employmentStartDate">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="department">Department</label>
+                <!-- <input type="text" class="form-control" id="department" formControlName="department"> -->
+                <select class="form-select" id="department" formControlName="department">
+                    <option value="it">IT</option>
+                    <option value="finance">Finance</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="accountance">Accontance</option>
+                    <option value="hrm">HRM</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="designation">Designation</label>
+                <select class="form-select" formControlName="designation" id="designation">
+                    <option value="administrator">Administrator</option>
+                    <option value="manager">Manager</option>
+                    <option value="analyst">Analyst</option>
+                    <option value="hrcoordinator">HR Coordinator</option>
+                    <option value="accountant">Accountant</option>
+                    <option value="taxspecialist">Tax Specialist</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="employmentStatus">Employment Status</label>
+                <input type="text" class="form-control" id="employmentStatus" formControlName="employmentStatus" placeholder="Employment Status">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="bankAccountDetails">Bank Account Details</label>
+                <input type="text" class="form-control" id="bankAccountDetails" formControlName="bankAccountDetails" placeholder="bankAccountDetails">
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
 

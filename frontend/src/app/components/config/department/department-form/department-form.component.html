@@ -1,6 +1,21 @@
 <div class="container">
     <h1>Department Form</h1>
     <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+
+
+        <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="departmentHead">Department Head</label>
+                <!-- <input type="text" class="form-control" id="employee" formControlName="employee"> -->
+                <select formControlName="departmentHead">
+                  <option *ngFor="let employee of departmentHeads" [value]="employee.id">{{employee.firstName}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
@@ -10,20 +25,12 @@
             </div>
         </div>
 
-        <!-- <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="departmentHead">Department Head</label>
-                    <input type="text" class="form-control" id="departmentHead" formControlName="departmentHead">
-                </div>
-            </div>
-        </div> -->
-
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="description">Description</label>
                     <input type="text" class="form-control" id="description" formControlName="description">
+                    <!-- <textarea class="form-control" id="description" formControlName="description"></textarea> -->
                 </div>
             </div>
         </div>

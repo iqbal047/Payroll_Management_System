@@ -11,14 +11,15 @@ import { CrudService } from 'src/app/services/crud.service';
 })
 export class BenefitsListComponent {
 
-  displayedColumns: string[] = [ 'benefitType', 'benefitCost','actions'];
-  // 'employee',  'benefitEnrollmentDate',
+  displayedColumns: string[] = [ 'employee','benefitEnrollmentDate','benefitendDate',
+  'benefitType','description','taxable','frequency', 'benefitCost','actions'];
+    
   dataSource: Benefits[] = [];
 
   constructor(private service: CrudService, private router: Router) { }
 
   ngOnInit(): void {
-    this.service.getList('benefits').then((res: AppResponse) => {
+    this.service.getList('benefits').subscribe((res: AppResponse) => {
       this.dataSource = res.data.content
     }
     );

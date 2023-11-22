@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppResponse } from 'src/app/dto/response.dto';
+// import { AppResponse } from 'src/app/dto/response.dto';
 import { TimeOff } from 'src/app/model/config/time-off-model';
 import { CrudService } from 'src/app/services/crud.service';
 
@@ -17,7 +18,7 @@ export class TimeOffListComponent {
   constructor(private service: CrudService, private router: Router) { }
 
   ngOnInit(): void {
-    this.service.getList('timeoff').then((res: AppResponse) => {
+    this.service.getList('timeoff').subscribe((res: AppResponse) => {
       this.dataSource = res.data.content
     }
     );

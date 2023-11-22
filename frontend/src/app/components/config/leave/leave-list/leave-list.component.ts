@@ -11,14 +11,14 @@ import { CrudService } from 'src/app/services/crud.service';
 })
 export class LeaveListComponent {
 
-  displayedColumns: string[] = [ 'approved', 'leaveType','reason','halfDay','actions'];
-  // 'employee',  'benefitEnrollmentDate',
+  displayedColumns: string[] = ['employee', 'startDate', 'endDate', 'approved', 'leaveType','reason','halfDay','actions'];
+  
   dataSource: Leave[] = [];
 
   constructor(private service: CrudService, private router: Router) { }
 
   ngOnInit(): void {
-    this.service.getList('leave').then((res: AppResponse) => {
+    this.service.getList('leave').subscribe((res: AppResponse) => {
       this.dataSource = res.data.content
     }
     );

@@ -25,13 +25,32 @@ import { AttendanceListComponent } from './components/config/attendance/attendan
 import { LeaveFormComponent } from './components/config/leave/leave-form/leave-form.component';
 import { LeaveListComponent } from './components/config/leave/leave-list/leave-list.component';
 import { DashboardComponent } from './components/layout/dashboard/dashboard.component';
+import { SidemenuComponent } from './components/layout/sidemenu/sidemenu.component';
+import { HomeComponent } from './components/layout/home/home.component';
+import { AboutComponent } from './components/layout/about/about.component';
+import { ContactComponent } from './components/layout/contact/contact.component';
+import { canActivate, canActivateChild } from './services/auth/auth-guard';
+import { LoginComponent } from './components/layout/login-page/login/login.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './services/interceptors/auth-interceptor.service';
+import { DevicesComponent } from './components/layout/devices/devices.component';
+
+// import { SidemenuComponent } from './admin-panel/sidemenu/sidemenu.component';
 
 const routes: Routes = [
   {
-    path: '', component: DashboardComponent,
+    // path: '', component: DashboardComponent,
+    path: '', component: SidemenuComponent,
+    canActivate: [canActivate],
+    canActivateChild: [canActivateChild],
   children: [
     // {path: '', component: RoleFormComponent},
     // {path: 'list', component: RoleListComponent},
+    { path: 'home', component: HomeComponent },
+    { path: 'devices', component: DevicesComponent },
+    { path: 'about', component: AboutComponent },
+    { path: 'contact', component: ContactComponent },
+    { path: 'dashboard', component: DashboardComponent },
     {path: 'attendance-form', component: AttendanceFormComponent},
     {path: 'attendance-list', component: AttendanceListComponent},
     {path: 'employee-form', component: EmployeeFormComponent},
@@ -50,18 +69,33 @@ const routes: Routes = [
     {path: 'salary-list', component: SalaryListComponent},
     {path: 'tax-with-holding-form', component: TaxWithholdingFormComponent},
     {path: 'tax-with-holding-list', component: TaxWithholdingListComponent},
-    {path: 'time-off-form', component: TimeOffFormComponent},
-    {path: 'time-off-list', component: TimeOffListComponent},
+    // {path: 'time-off-form', component: TimeOffFormComponent},
+    // {path: 'time-off-list', component: TimeOffListComponent},
     {path: 'leave-form', component: LeaveFormComponent},
     {path: 'leave-list', component: LeaveListComponent}
   ]
-}
+},
+{
+  path: 'login', component: LoginComponent
+},
 
   // {path: 'dashboard-list', component: LeaveListComponent}
 ];
 
+// @NgModule({
+//   imports: [RouterModule.forRoot(routes)],
+//   exports: [RouterModule]
+// })
+// export class AppRoutingModule { }
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

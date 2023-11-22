@@ -17,7 +17,7 @@ export class PositionListComponent {
   constructor(private service: CrudService, private router: Router) { }
 
   ngOnInit(): void {
-    this.service.getList('position').then((res: AppResponse) => {
+    this.service.getList('position').subscribe((res: AppResponse) => {
       this.dataSource = res.data.content
     }
     );

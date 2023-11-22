@@ -1,42 +1,55 @@
 
-Header 
-.header-content-spacer {
-  flex: 1 1 auto;
-}
+// Header 
+// .header-content-spacer {
+//   flex: 1 1 auto;
+// }
 
-// Sidenav
-.sidenav-container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
+// // Sidenav
+// .sidenav-container {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+// }
 
-.profile-content {
-  position: sticky;
-  top:0;
-  display: flex;
-  box-sizing: border-box;
-  padding: 0 16px;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-  white-space: nowrap;
-  height: var(--mat-toolbar-standard-height);
-  background: var(--mat-toolbar-container-background-color);
-  color: var(--mat-toolbar-container-text-color);
-}
+// .profile-content {
+//   position: sticky;
+//   top:0;
+//   display: flex;
+//   box-sizing: border-box;
+//   padding: 0 16px;
+//   width: 100%;
+//   flex-direction: row;
+//   align-items: center;
+//   white-space: nowrap;
+//   height: var(--mat-toolbar-standard-height);
+//   background: var(--mat-toolbar-container-background-color);
+//   color: var(--mat-toolbar-container-text-color);
+// }
 
-.menu-container {
-  min-width: 15rem;
-}
+// .menu-container {
+//   min-width: 15rem;
+// }
 
-.menu-item {
-  padding: 10px 0;
-  border-bottom: 1px solid var(--mat-toolbar-container-background-color);
-  transition: background-color 0.3s;
-}
+// .menu-item {
+//   padding: 10px 0;
+//   border-bottom: 1px solid var(--mat-toolbar-container-background-color);
+//   transition: background-color 0.3s;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // .menu-item:last-child {
 //   border-bottom: none;
@@ -93,99 +106,172 @@ Header
 //end code
 
 // Body
-.page-body {
-  position: absolute;
-  overflow: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;  
-}
+// .page-body {
+//   position: absolute;
+//   overflow: auto;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;  
+// }
 
 
-// new style
-$sidenav-width: 15rem;
-$submenu-width: 20%; // Adjust this as needed
-$min-submenu-item-width: 15rem; // Minimum width for submenu items
+// // new style
+// $sidenav-width: 15rem;
+// $submenu-width: 20%; // Adjust this as needed
+// $min-submenu-item-width: 15rem; // Minimum width for submenu items
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
+// body {
+//   margin: 0;
+//   font-family: Arial, sans-serif;
+// }
 
-.sidenav {
-  height: 100%;
-  width: $sidenav-width;
-  position: fixed;
-  z-index: 1;
-  // top: 0;
-  left: 0;
-  background-color: #111;
-  padding-top: 20px;
-}
+// .sidenav {
+//   height: 100%;
+//   width: $sidenav-width;
+//   position: fixed;
+//   z-index: 1;
+//   // top: 0;
+//   left: 0;
+//   background-color: #111;
+//   padding-top: 20px;
+// }
 
-.menu-item {
-  padding: 10px;
-  color: white;
-  cursor: pointer;
-  position: relative;
-  margin: 0;
+// .menu-item {
+//   padding: 10px;
+//   color: white;
+//   cursor: pointer;
+//   position: relative;
+//   margin: 0;
 
-  &:hover {
-    background-color: #333;
-  }
+//   &:hover {
+//     background-color: #333;
+//   }
 
-  .submenu {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: $sidenav-width;
-    background-color: #111;
-    width: max($submenu-width, $min-submenu-item-width); // Ensure a minimum width
-    margin: 0;
-    padding: 0;
+//   .submenu {
+//     display: none;
+//     position: absolute;
+//     top: 0;
+//     left: $sidenav-width;
+//     background-color: #111;
+//     width: max($submenu-width, $min-submenu-item-width); // Ensure a minimum width
+//     margin: 0;
+//     padding: 0;
 
-    .submenu-item {
-      padding: 10px;
-      cursor: pointer;
-      position: relative;
-      margin: 0;
-      min-width: $min-submenu-item-width; // Minimum width for submenu items
+//     .submenu-item {
+//       padding: 10px;
+//       cursor: pointer;
+//       position: relative;
+//       margin: 0;
+//       min-width: $min-submenu-item-width; // Minimum width for submenu items
 
-      &:hover {
-        background-color: #555;
-      }
+//       &:hover {
+//         background-color: #555;
+//       }
 
-      .subsubmenu {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 100%; // Adjusted left position
-        background-color: #111;
-        width: max($submenu-width, $min-submenu-item-width); // Ensure a minimum width
-        margin: 0;
-        padding: 0;
+//       .subsubmenu {
+//         display: none;
+//         position: absolute;
+//         top: 0;
+//         left: 100%; // Adjusted left position
+//         background-color: #111;
+//         width: max($submenu-width, $min-submenu-item-width); // Ensure a minimum width
+//         margin: 0;
+//         padding: 0;
 
-        .subsubmenu-item {
-          padding: 10px;
-          cursor: pointer;
-          position: relative;
-          margin: 0;
-          min-width: $min-submenu-item-width; // Minimum width for submenu items
+//         .subsubmenu-item {
+//           padding: 10px;
+//           cursor: pointer;
+//           position: relative;
+//           margin: 0;
+//           min-width: $min-submenu-item-width; // Minimum width for submenu items
 
-          &:hover {
-            background-color: #777;
-          }
-        }
-      }
+//           &:hover {
+//             background-color: #777;
+//           }
+//         }
+//       }
 
-      &:hover .subsubmenu {
-        display: block;
-      }
-    }
-  }
+//       &:hover .subsubmenu {
+//         display: block;
+//       }
+//     }
+//   }
 
-  &:hover .submenu {
-    display: block;
-  }
-}
+//   &:hover .submenu {
+//     display: block;
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+/* Global styles */
+
+// $primary-color: #007bff;
+// $secondary-color: #6c757d;
+// $light-color: #f8f9fa;
+
+// body {
+//   font-family: sans-serif;
+//   background-color: $light-color;
+// }
+
+// .container {
+//   padding: 20px;
+// }
+
+// h1 {
+//   font-size: 24px;
+//   margin-bottom: 20px;
+// }
+
+// .card {
+//   border: 1px solid $secondary-color;
+//   margin-bottom: 20px;
+// }
+
+// .card-header {
+//   background-color: $primary-color;
+//   color: white;
+//   padding: 10px;
+// }
+
+// .card-body {
+//   padding: 10px;
+// }
+
+// table {
+//   width: 100%;
+//   border-collapse: collapse;
+// }
+
+// th, td {
+//   padding: 5px;
+//   border: 1px solid $secondary-color;
+//   text-align: left;
+// }
+
+// .chart-container {
+//   height: 300px;
+// }
+
+// /* Specific styles for charts */
+
+// #ytd-employer-cost-chart,
+// #employees-impacted-chart {
+//   width: 100%;
+//   height: 100%;
+// }
+
+
+
+
+
+

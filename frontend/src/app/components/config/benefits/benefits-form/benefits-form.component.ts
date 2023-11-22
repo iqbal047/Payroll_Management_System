@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { OperationStatus } from 'src/app/constants/status.enum';
+import { Page } from 'src/app/dto/page.dto';
+import { AppResponse } from 'src/app/dto/response.dto';
 import { Benefits } from 'src/app/model/config/benefits-model';
+import { Employee } from 'src/app/model/config/employee-model';
 import { CrudService } from 'src/app/services/crud.service';
 import { NotificationUtil } from 'src/app/utils/notification.util';
 import { populateFormControl } from 'src/app/utils/object.util';
@@ -15,14 +18,20 @@ export class BenefitsFormComponent {
 
   formGroup!: FormGroup;
   controls: any = {
-    // "employee": new FormControl('', []),
+    "employee": new FormControl('', []),
+    "benefitEnrollmentDate": new FormControl('', []),
+    "benefitendDate": new FormControl('', []),
     "benefitType": new FormControl('', []),
+    "description": new FormControl('', []),
+    "taxable": new FormControl('', []),
+    "frequency": new FormControl('', []),
     "benefitCost": new FormControl('', []),
-    // "benefitEnrollmentDate": new FormControl('', [])
+
   };
   submitted = false;
   endPoint = "benefits";
   data: any = {}
+  employees: Employee[] = [];
 
   constructor(private formBuilder: FormBuilder, private service: CrudService, private noticeUtil: NotificationUtil) { }
 
@@ -32,6 +41,10 @@ export class BenefitsFormComponent {
     if (this.data.id) {
       populateFormControl(this.formGroup.controls, this.data);
     }
+    this.service.getList('employee', 0, 999999999).subscribe((res: AppResponse) =>{
+      const page: Page = res.data;
+      this.employees = page.content;
+    })
   }
 
   createForm() {
@@ -43,7 +56,10 @@ export class BenefitsFormComponent {
     if (this.formGroup.invalid) {
       return;
     }
-    const values: Benefits = { ...this.data, ...this.formGroup.value };
+    const values: Benefits = { ...this.data,
+       ...this.formGroup.value,
+       employee:{id: this.formGroup.value.employee} };
+       
     this.service.save(values, this.endPoint).subscribe(response => {
       this.formGroup.reset();
       this.submitted = false;

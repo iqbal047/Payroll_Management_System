@@ -2,27 +2,61 @@
 <div class="container">
     <h1>Attendance Form</h1>
     <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+
+
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label for="isPresent">Is Present</label>
-            <input type="text" class="form-control" id="isPresent" formControlName="isPresent">
+            <label for="employee">Employee</label>
+            <!-- <input type="text" class="form-control" id="employee" formControlName="employee"> -->
+            <select formControlName="employee">
+              <option *ngFor="let employee of employees" [value]="employee.id">{{employee.firstName}}</option>
+            </select>
           </div>
         </div>
       </div>
+
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="logDate"> Log Date</label>
+            <input type="date" class="form-control" id="logDate" formControlName="logDate">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="present">Is Present</label>
+            <!-- <input type="text" class="form-control" id="present" formControlName="present"> -->
+            <select class="form-select" id="present" formControlName="present">
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
             <label for="remarks">Remarks</label>
-            <input type="text" class="form-control" id="remarks" formControlName="remarks">
+            <input type="text" class="form-control" id="remarks" formControlName="remarks" placeholder ="remarks">
           </div>
         </div>
       </div>
+      
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label for="isOvertime">Is Overtime</label>
-            <input type="text" class="form-control" id="isOvertime" formControlName="isOvertime">
+            <label for="overtime">Is Overtime</label>
+            <!-- <input type="text" class="form-control" id="overtime" formControlName="overtime"> -->
+            <select class="form-select" id="overtime" formControlName="overtime">
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
           </div>
         </div>
       </div>
@@ -30,7 +64,7 @@
         <div class="col-md-6">
           <div class="form-group">
             <label for="hoursWorked">Hours Worked</label>
-            <input type="text" class="form-control" id="hoursWorked" formControlName="hoursWorked">
+            <input type="number" class="form-control" id="hoursWorked" formControlName="hoursWorked" placeholder ="hoursWorked">
           </div>
         </div>
       </div>
@@ -38,10 +72,21 @@
         <div class="col-md-6">
           <div class="form-group">
             <label for="location">Location</label>
-            <input type="text" class="form-control" id="location" formControlName="location">
+            <!-- <input type="text" class="form-control" id="location" formControlName="location"> -->
+            <select class="form-select" id="location" formControlName="location" >
+              <option value="dhaka">Dhaka</option>
+              <option value="chittagong">Chittagong</option>
+              <option value="khulna">Khulna</option>
+              <option value="rajshahi">Rajshahi</option>
+              <option value="rangpur">Rangpur</option>
+              <option value="cumilla">Cumilla</option>
+              <option value="sylhet">Sylhet</option>
+              <option value="barishal">Barishal</option>
+            </select>
           </div>
         </div>
       </div>
+
       <div class="row">
         <div class="col-md-12">
           <button type="submit" class="btn btn-primary">Submit</button>

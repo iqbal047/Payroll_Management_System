@@ -12,14 +12,14 @@ import { CrudService } from 'src/app/services/crud.service';
 export class DepartmentListComponent {
 
 
-  displayedColumns: string[] = ['departmentName','description','location', 'actions'];
+  displayedColumns: string[] = ['departmentHead','departmentName','description','location', 'actions'];
   // 'departmentHead',
   dataSource: Department[] = [];
 
   constructor(private service: CrudService, private router: Router) { }
 
   ngOnInit(): void {
-    this.service.getList('department').then((res: AppResponse) => {
+    this.service.getList('department').subscribe((res: AppResponse) => {
       this.dataSource = res.data.content
     }
     );

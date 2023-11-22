@@ -3,9 +3,9 @@ import { Employee } from "./employee-model";
 import { Salary } from "./salary-model";
 
 export interface PayrollTransaction extends AuditAbleModel {
-    // employee?:Employee;
+    employee?:Employee;
     payrollPeriod?:string;
-    // salary?:Salary;
+    salary?:Salary;
     hoursWorked?:number;
     overtimeHours?:number;
     grossEarnings?:number;

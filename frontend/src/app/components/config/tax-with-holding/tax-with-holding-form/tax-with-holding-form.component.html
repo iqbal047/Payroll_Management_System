@@ -5,12 +5,15 @@
 
         <div class="row">
             <div class="col-md-6">
-                <div class="form-group">
-                    <label for="employee">Employee</label>
-                    <input type="text" class="form-control" id="employee" formControlName="employee">
-                </div>
+              <div class="form-group">
+                <label for="employee">Employee</label>
+                <!-- <input type="text" class="form-control" id="employee" formControlName="employee"> -->
+                <select formControlName="employee">
+                  <option *ngFor="let employee of employees" [value]="employee.id">{{employee.firstName}}</option>
+                </select>
+              </div>
             </div>
-        </div>
+          </div>
 
         <div class="row">
             <div class="col-md-6">
@@ -25,7 +28,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="taxAmount">Tax Amount</label>
-                    <input type="text" class="form-control" id="taxAmount" formControlName="taxAmount">
+                    <input type="number" class="form-control" id="taxAmount" formControlName="taxAmount">
                 </div>
             </div>
         </div>

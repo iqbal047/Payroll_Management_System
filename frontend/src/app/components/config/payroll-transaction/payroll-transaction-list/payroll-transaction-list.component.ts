@@ -12,15 +12,15 @@ import { CrudService } from 'src/app/services/crud.service';
 export class PayrollTransactionListComponent {
 
 
-  displayedColumns: string[] = [ 'payrollPeriod', 'hoursWorked',
+  displayedColumns: string[] = ['employee', 'payrollPeriod','salary', 'hoursWorked',
   'overtimeHours','grossEarnings','deductions','netPay', 'actions'];
-  // 'employee','salary',
+  
   dataSource: PayrollTransaction[] = [];
 
   constructor(private service: CrudService, private router: Router) { }
 
   ngOnInit(): void {
-    this.service.getList('payrolltransaction').then((res: AppResponse) => {
+    this.service.getList('payrolltransaction').subscribe((res: AppResponse) => {
       this.dataSource = res.data.content
     }
     );

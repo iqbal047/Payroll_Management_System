@@ -12,14 +12,14 @@ import { CrudService } from 'src/app/services/crud.service';
 export class AttendanceListComponent {
 
 
-  displayedColumns: string[] = [ 'isPresent','remarks','isOvertime','hoursWorked', 'location', 'actions'];
-  // 'logDate', 'isPresent','' PresentDays 'OvertimeHour',,
+  displayedColumns: string[] = ['employee', 'logDate','present','remarks','overtime','hoursWorked', 'location', 'actions'];
+  //  'isPresent','' PresentDays 'OvertimeHour',,
   dataSource: Attendance[] = [];
 
   constructor(private service: CrudService, private router: Router) { }
 
   ngOnInit(): void {
-    this.service.getList('attendance').then((res: AppResponse) => {
+    this.service.getList('attendance').subscribe((res: AppResponse) => {
       this.dataSource = res.data.content
     }
     );

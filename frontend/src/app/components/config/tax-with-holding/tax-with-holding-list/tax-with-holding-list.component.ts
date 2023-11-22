@@ -17,7 +17,7 @@ export class TaxWithholdingListComponent {
   constructor(private service: CrudService, private router: Router) { }
 
   ngOnInit(): void {
-    this.service.getList('taxwithholding').then((res: AppResponse) => {
+    this.service.getList('taxwithholding').subscribe((res: AppResponse) => {
       this.dataSource = res.data.content
     }
     );

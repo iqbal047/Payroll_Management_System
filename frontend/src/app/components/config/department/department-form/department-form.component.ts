@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { OperationStatus } from 'src/app/constants/status.enum';
+import { Page } from 'src/app/dto/page.dto';
+import { AppResponse } from 'src/app/dto/response.dto';
 import { Department } from 'src/app/model/config/department-model';
+import { Employee } from 'src/app/model/config/employee-model';
 import { CrudService } from 'src/app/services/crud.service';
 import { NotificationUtil } from 'src/app/utils/notification.util';
 import { populateFormControl } from 'src/app/utils/object.util';
@@ -15,8 +18,9 @@ export class DepartmentFormComponent {
 
   formGroup!: FormGroup;
   controls: any = {
+
+    "departmentHead": new FormControl('', []),
     "departmentName": new FormControl('', []),
-    // "departmentHead": new FormControl('', []),
     "description": new FormControl('', []),
     "location": new FormControl('', []),
 
@@ -24,6 +28,7 @@ export class DepartmentFormComponent {
   submitted = false;
   endPoint = "department";
   data: any = {}
+  departmentHeads: Employee[] = [];
 
   constructor(private formBuilder: FormBuilder, private service: CrudService, private noticeUtil: NotificationUtil) { }
 
@@ -33,6 +38,10 @@ export class DepartmentFormComponent {
     if (this.data.id) {
       populateFormControl(this.formGroup.controls, this.data);
     }
+    this.service.getList('employee', 0, 999999999).subscribe((res: AppResponse) =>{
+      const page: Page = res.data;
+      this.departmentHeads = page.content;
+    })
   }
 
   createForm() {
@@ -44,7 +53,10 @@ export class DepartmentFormComponent {
     if (this.formGroup.invalid) {
       return;
     }
-    const values: Department = { ...this.data, ...this.formGroup.value };
+    const values: Department = { ...this.data,
+       ...this.formGroup.value,
+       departmentHead:{id: Number(this.formGroup.value.departmentHead)} };
+
     this.service.save(values, this.endPoint).subscribe(response => {
       this.formGroup.reset();
       this.submitted = false;

@@ -13,14 +13,14 @@ import { CrudService } from 'src/app/services/crud.service';
 export class EmployeeListComponent {
 
   
-  displayedColumns: string[] = ['firstName', 'lastName', 'gender', 'address','phone',
-  'email','employmentStartDate','department','position','employmentStatus','bankAccountDetails','actions' ];
+  displayedColumns: string[] = ['firstName', 'lastName', 'dateOfBirth', 'gender','nationalId', 'address','phone',
+  'email','employmentStartDate','department','designation','employmentStatus','bankAccountDetails','actions' ];
   dataSource: Employee[] = [];
 
   constructor(private service: CrudService, private router: Router) { }
 
   ngOnInit(): void {
-    this.service.getList('employee').then((res: AppResponse) => {
+    this.service.getList('employee').subscribe((res: AppResponse) => {
       this.dataSource = res.data.content
     }
     );
