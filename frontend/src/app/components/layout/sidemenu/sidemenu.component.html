@@ -1,0 +1,252 @@
+<mat-sidenav-container class="sidenav-container" *ngIf="config.shouldRun" [hasBackdrop]="config.hasBackdrop">
+    <mat-sidenav #sidenav [mode]="config.mode" [position]="config.position" [opened]="config.isOpened">
+        <div class="profile-content" color="primary">
+            <h2 matSubheader class="mt-2">
+                <mat-icon>account_balance_wallet</mat-icon>
+                Payroll Application
+            </h2>
+        </div>
+
+        <div class="container menu-container">
+            <div class="sidenav">
+                <div class="menu-item" [routerLink]="'dashboard'">
+                    <mat-icon>assessment</mat-icon>
+                    Dashboard
+                </div>
+                <div class="menu-item">
+                    <mat-icon>verified_user</mat-icon>
+                    Authority
+                    <div class="submenu">
+                        <div class="submenu-item">Role
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'role-form'">Role Form</div>
+                                <div class="subsubmenu-item" [routerLink]="'role-list'">Role List</div>
+                            </div>
+                        </div>
+                        <div class="submenu-item">Permission
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'permission-form'">Permission-Form</div>
+                                <div class="subsubmenu-item" [routerLink]="'permission-list'">Permission-List</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <mat-icon>business</mat-icon>
+                    Project Configuration
+                    <div class="submenu">
+                        <div class="submenu-item">Attendance
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'attendance-form'">Attendance Form</div>
+                                <div class="subsubmenu-item" [routerLink]="'attendance-list'">Attendance List</div>
+                            </div>
+                        </div>
+
+                        <div class="submenu-item">Benefits
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'benefits-form'">Benefits Form</div>
+                                <div class="subsubmenu-item" [routerLink]="'benefits-list'">Benefits List</div>
+                            </div>
+                        </div>
+
+                        <div class="submenu-item">Department
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'department-form'">Department Form</div>
+                                <div class="subsubmenu-item" [routerLink]="'department-list'">Department List</div>
+                            </div>
+                        </div>
+
+                        <div class="submenu-item">Employee
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'employee-form'">Employee Form</div>
+                                <div class="subsubmenu-item" [routerLink]="'employee-list'">Employee List</div>
+                            </div>
+                        </div>
+
+                        <div class="submenu-item">Leave
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'leave-form'">Leave Form</div>
+                                <div class="subsubmenu-item" [routerLink]="'leave-list'">Leave List</div>
+                            </div>
+                        </div>
+
+                        <div class="submenu-item">PaymentHistory
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'payment-history-form'">PaymentHistory Form
+                                </div>
+                                <div class="subsubmenu-item" [routerLink]="'payment-history-list'">PaymentHistory List
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="submenu-item">PayrollTransaction
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'payroll-transaction-form'">
+                                    PayrollTransaction Form</div>
+                                <div class="subsubmenu-item" [routerLink]="'payroll-transaction-list'">
+                                    PayrollTransaction List</div>
+                            </div>
+                        </div>
+
+                        <div class="submenu-item">Position
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'position-form'">position Form</div>
+                                <div class="subsubmenu-item" [routerLink]="'position-list'">position List</div>
+                            </div>
+                        </div>
+
+
+                        <div class="submenu-item">Salary
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'salary-form'">Salary Form</div>
+                                <div class="subsubmenu-item" [routerLink]="'salary-list'">Salary List</div>
+                            </div>
+                        </div>
+
+
+                        <div class="submenu-item">TaxWithholding
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'tax-with-holding-form'">TaxWithholding Form
+                                </div>
+                                <div class="subsubmenu-item" [routerLink]="'tax-with-holding-list'">TaxWithholding List
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- <div class="submenu-item">TimeOff
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'time-off-form'">TimeOff Form</div>
+                                <div class="subsubmenu-item" [routerLink]="'time-off-list'">TimeOff List</div>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="submenu-item">Location
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item">location-form</div>
+                                <div class="subsubmenu-item">location-list</div>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="submenu-item">Submenu 2.1
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item">Subsubmenu 2.1.1</div>
+                                <div class="subsubmenu-item">Subsubmenu 2.1.2</div>
+                            </div>
+                        </div>
+                        <div class="submenu-item">Submenu 2.2
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item">Subsubmenu 2.2.1</div>
+                                <div class="subsubmenu-item">Subsubmenu 2.2.2</div>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+
+                <!-- <div class="menu-item">                              
+                    <mat-icon>business</mat-icon>
+                    Project Data 
+                    <div class="submenu">
+                        <div class="submenu-item">Audit Trail
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'audittrail-form'">Audittrail-form</div>
+                                <div class="subsubmenu-item" [routerLink]="'audittrail-list'">Audittrail-list</div>
+                            </div>
+                        </div>
+                        <div class="submenu-item">Order
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'order-form'">Order-form</div>
+                                <div class="subsubmenu-item" [routerLink]="'order-list'">Order-list</div>
+                            </div>
+                        </div>
+                        
+                        <div class="submenu-item">Purchase
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'purchase-form'">Purchase-form</div>
+                                <div class="subsubmenu-item" [routerLink]="'purchase-list'">Purchase-list</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div> -->
+                <div class="menu-item" [routerLink]="'devices'">
+                    <mat-icon>devices</mat-icon>
+                    Devices
+                  </div>
+                  
+                <div class="menu-item" [routerLink]="'about'">
+                    <mat-icon>info</mat-icon>
+                    About
+                </div>
+                <div class="menu-item" [routerLink]="'contact'">
+                    <mat-icon>contacts</mat-icon>
+                    Contact
+                </div>
+            </div>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="page-body">
+            <div style="position: sticky; top: 0;">
+                <!-- <mat-toolbar style="background-color: #3498db;">
+                    <button mat-icon-button (click)="sidenav.toggle()" class="example-icon"
+                        aria-label="Example icon-button with menu icon">
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                    <span>My App</span>
+                    <span class="header-content-spacer"></span>
+                    <button mat-icon-button>
+                        <mat-icon>favorite</mat-icon>
+                    </button>
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                        <mat-icon>share</mat-icon>
+                    </button>
+                    
+
+                </mat-toolbar> -->
+                <mat-toolbar style="background-color: #3498db;">
+                    <mat-toolbar-row class="justify-content-between">
+                        <button mat-icon-button (click)="sidenav.toggle()" class="example-icon"
+                            aria-label="Example icon-button with menu icon">
+                            <mat-icon>menu</mat-icon>
+                        </button>
+                        <div class="row mr-2 ml-auto">
+                            <ul class="row m-0 align-items-center">
+                                <li>
+                                    <button mat-button [matMenuTriggerFor]="menu"
+                                        class="user mt-2 d-flex align-items-center">
+                                        <img src="" alt="" class="" />
+                                        User Name
+                                        <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
+                                    </button>
+                                    <mat-menu #menu="matMenu">
+                                        <button mat-menu-item>
+                                            <mat-icon>exit_to_app</mat-icon>   
+                                            Logout
+                                        </button>
+                                    </mat-menu>
+                                    
+                                    <!-- <div class="topnav">
+                                        <div class="topnav-right">
+                                            <a href="#search">Logout</a>
+                                            <button (click)="logout()">
+                                                <mat-icon>favorite</mat-icon>
+                                                Logout
+                                            </button>
+                                        </div>
+                                     </div> --> 
+
+                                </li>
+                            </ul>
+                        </div>
+                    </mat-toolbar-row>
+                </mat-toolbar>
+
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

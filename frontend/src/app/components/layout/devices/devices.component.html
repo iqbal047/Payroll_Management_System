@@ -1,0 +1,31 @@
+
+<!-- pricing-table.component.html -->
+
+<div class="container">
+    <table class="table pricing-table">
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>Price</th>
+          <th>Features</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let plan of plans">
+          <td>{{ plan.name }}</td>
+          <td>{{ plan.price }}</td>
+          <td>
+            <ul>
+              <li *ngFor="let feature of plan.features">{{ feature }}</li>
+            </ul>
+          </td>
+          <td><button class="btn btn-primary">Sign up</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+
+
+
